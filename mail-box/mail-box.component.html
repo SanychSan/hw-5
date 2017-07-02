@@ -1,0 +1,22 @@
+<table class="table table-striped table-mail-box">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>from</th>
+      <th>to</th>
+      <th>description</th>
+      <th colspan="2">elapsed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      appMailCard
+      *ngFor="let mail of mails$ | async; let i = index"
+      [mail]="mail"
+      [index]="i"
+      (onremove)="removeMail($event)"
+      (dblclick)="goToMail(mail.id)"
+    >
+    </tr>
+  </tbody>
+</table>

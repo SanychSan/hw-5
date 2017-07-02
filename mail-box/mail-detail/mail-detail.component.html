@@ -1,0 +1,16 @@
+<div class="btn-group">
+  <button type="button" class="btn btn-default" (click)="goToMails()"><span class="glyphicon glyphicon-chevron-left"></span> go back</button>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <span class="pull-right">{{ mail.createdAt | date:'medium' | elapsed }}</span>
+    <h3 class="panel-title">{{ mail.title }}</h3>
+  </div>
+  <div class="panel-body">
+    {{ mail.content }}
+  </div>
+  <div class="panel-footer">
+    {{ mail.from }}
+  </div>
+</div>

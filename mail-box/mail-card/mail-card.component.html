@@ -1,0 +1,14 @@
+<td>{{ index + 1 }}</td>
+<td>{{ mail.from }}</td>
+<td>{{ mail.to }}</td>
+<td><strong>{{ mail.title }}</strong> - {{ mail.content }}</td>
+<td>
+  {{ mail.createdAt | date:'medium' | elapsed }}
+</td>
+<td style="width: 1%">
+  <button
+    type="button"
+    class="btn btn-danger show-on-hover"
+    (click)="remove()"
+  ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+</td>
